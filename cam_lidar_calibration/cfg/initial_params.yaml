@@ -1,0 +1,51 @@
+%YAML:1.0
+---
+
+# 图像的话题
+image_topic: "/camera/color/image_raw"
+
+#激光点云话题
+pointcloud_topic: "/velodyne_points"
+
+# 0:非鱼眼相机
+distortion_model: 0
+
+# 激光雷达线数
+scan_line: 16
+
+# 标定棋盘格的参数：内角点数量（长×宽）、每个格子的尺寸（毫米）
+chessboard:
+  length: 11 
+  width: 8
+  grid_size: 25
+
+# 标定板实际尺寸大小（毫米）
+board_dimension:
+  length: 340
+  width: 260
+
+# 棋盘纸中心与标定板中心的偏移
+translation_error:
+  length: 0
+  width: 0
+
+# 相机的内参矩阵K
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 6.0896797801678485e+02, 0.0, 3.2463739379097831e+02,
+          0.0, 6.0896797801678485e+02, 2.4509133172969374e+02, 
+          0, 0, 1]
+
+# 相机的失真系数D
+distortion_coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ 9.3749499338339655e-03, 9.1127530575576554e-01, 2.6816342095888029e-03, -2.2554421074184295e-03, -3.6297377244531344e+00 ]
+
+# 相机图像分辨率
+image_pixel:
+  width: 640
+  height: 480
