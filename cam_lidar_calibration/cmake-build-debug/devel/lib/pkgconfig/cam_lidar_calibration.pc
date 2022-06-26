@@ -1,0 +1,8 @@
+prefix=/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/devel
+
+Name: cam_lidar_calibration
+Description: Description of cam_lidar_calibration
+Version: 0.0.1
+Cflags: -I/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/devel/include -I/usr/local/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: nodelet roscpp std_msgs sensor_msgs message_runtime

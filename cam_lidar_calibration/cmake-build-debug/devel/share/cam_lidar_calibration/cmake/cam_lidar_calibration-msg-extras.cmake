@@ -1,0 +1,2 @@
+set(cam_lidar_calibration_MESSAGE_FILES "/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/msg/calibration_data.msg;/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/msg/extrinsics.msg")
+set(cam_lidar_calibration_SERVICE_FILES "")

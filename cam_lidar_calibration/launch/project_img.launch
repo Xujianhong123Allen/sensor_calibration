@@ -1,0 +1,10 @@
+<launch>
+
+  <node pkg="cam_lidar_calibration" type="projector" name="projector" output="screen">
+    <param name="cfg" type="string" value="$(find cam_lidar_calibration)/calibration_result/2022-4-8-17-4/calibration.yaml" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cam_lidar_calibration)/rviz/project.rviz" />
+
+          
+</launch>

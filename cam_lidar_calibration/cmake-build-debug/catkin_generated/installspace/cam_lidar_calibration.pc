@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: cam_lidar_calibration
+Description: Description of cam_lidar_calibration
+Version: 0.0.1
+Cflags: -I${prefix}/include -I/usr/local/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: nodelet roscpp std_msgs sensor_msgs message_runtime
