@@ -1,0 +1,19 @@
+%YAML:1.0
+---
+
+# base雷达到distribution雷达的初始变换位姿
+init_transform: 
+  x: 0
+  y: 0
+  z: 0
+  roll: 0
+  pitch: 0
+  yaw: 0    #角度从上往下看逆时针为正
+
+
+# 雷达标定所需地图最小点云数量
+map_match_min_num: 1200
+
+# ICP匹配成功时的最大ICP匹配得分
+max_icp_fittness_score: 2
+

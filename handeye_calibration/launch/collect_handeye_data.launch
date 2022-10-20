@@ -1,0 +1,9 @@
+<launch>
+
+    <node pkg="handeye_calibration" type="collect_hand_eye_data" name="collect_hand_eye_data" output="screen">
+      <param name="cfg" type="string" value="$(find handeye_calibration)/cfg/Settings.yaml" />
+      <param name="data" type="string" value="$(find handeye_calibration)/data/" />
+    </node>
+  
+  </launch>
+  

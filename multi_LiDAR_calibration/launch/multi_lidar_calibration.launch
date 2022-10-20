@@ -1,0 +1,18 @@
+<launch>
+
+	<group ns="G0">
+		<include file="$(find multi_LiDAR_calibration)/launch/loam.launch" />
+		<node pkg="tf2_ros" type="static_transform_publisher" name="mocap_to_map_tf" args="0 0 0 0 0 0 1 world laser_initG0" />
+	</group>
+
+	<group ns="G6">
+		<include file="$(find multi_LiDAR_calibration)/launch/loam.launch" />
+		<node pkg="tf2_ros" type="static_transform_publisher" name="mocap_to_map_tf" args="0 0 0 0 0 0 1 world laser_initG6" />
+	</group>
+
+	<node pkg="multi_LiDAR_calibration" type="multi_map_fusion" name="multi_map_fusion" output="screen">
+		<param name="cfg" type="string" value="$(find multi_LiDAR_calibration)/cfg/param.yaml" />	
+	</node>
+	
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find multi_LiDAR_calibration)/rviz_cfg/multi_loam_map.rviz" />
+</launch>

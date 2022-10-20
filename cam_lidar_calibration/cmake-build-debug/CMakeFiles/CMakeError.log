@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_520f1/fast && /usr/bin/make  -f CMakeFiles/cmTC_520f1.dir/build.make CMakeFiles/cmTC_520f1.dir/build
+make[1]: 进入目录“/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_520f1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_520f1.dir/src.c.o   -c /media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_520f1
+/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_520f1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_520f1.dir/src.c.o  -o cmTC_520f1 
+CMakeFiles/cmTC_520f1.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x67)：对‘pthread_join’未定义的引用
+src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_520f1.dir/build.make:106: recipe for target 'cmTC_520f1' failed
+make[1]: *** [cmTC_520f1] Error 1
+make[1]: 离开目录“/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp”
+Makefile:141: recipe for target 'cmTC_520f1/fast' failed
+make: *** [cmTC_520f1/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_304c8/fast && /usr/bin/make  -f CMakeFiles/cmTC_304c8.dir/build.make CMakeFiles/cmTC_304c8.dir/build
+make[1]: 进入目录“/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_304c8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_304c8.dir/CheckFunctionExists.c.o   -c /media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_304c8
+/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/SOFTWARES/Clion/clion-2020.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_304c8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_304c8.dir/CheckFunctionExists.c.o  -o cmTC_304c8  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_304c8.dir/build.make:106: recipe for target 'cmTC_304c8' failed
+make[1]: *** [cmTC_304c8] Error 1
+make[1]: 离开目录“/media/ch/fdff4d85-b8f7-445b-905b-5ce418a00fc9/ch/NutstoreFiles/MyCloud/ExternalBrain/C2_ToBeProcessed/MyResearchingProject/lidar/catkin_velodyne/src/cam_lidar_calibration/cmake-build-debug/CMakeFiles/CMakeTmp”
+Makefile:141: recipe for target 'cmTC_304c8/fast' failed
+make: *** [cmTC_304c8/fast] Error 2
+
+
+

@@ -1,0 +1,27 @@
+%YAML:1.0
+---
+
+## 1. 标定板
+# Patter: chessboard, circles, acircles
+Pattern: chessboard
+board_width: 11
+board_height: 8
+# Square_Size: milimeter
+square_size: 25.0
+
+Image_Topic: "/camera/color/image_raw" 
+Marker_Pose_Topic: "/vrpn_client_node/G0_marker/pose"
+
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 6.0896797801678485e+02, 0., 3.2463739379097831e+02, 0.,
+       6.0896797801678485e+02, 2.4509133172969374e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ 9.3749499338339655e-03, 9.1127530575576554e-01,
+       2.6816342095888029e-03, -2.2554421074184295e-03,
+       -3.6297377244531344e+00 ]
